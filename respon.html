@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sziaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</title>
+</head>
+<style>
+    html { scroll-behavior: smooth; }
+    body { background-color: rgb(28, 34, 92); margin: 0;}
+    header { 
+        padding: 10px;
+        margin-bottom: 10px;
+        background-color: rgb(8, 10, 27);
+     }
+    header a{
+        display: inline-block;
+        color: white;
+        font-size: 17px;
+        font-weight: 600;
+        letter-spacing: 0.4px;
+        text-decoration: none;
+        padding: 5px 15px;
+        border: 1px solid rgb(8, 10, 27);
+        border-radius: 5px;
+        transition: 0.5s;
+    }
+    header a:hover { background-color: rgb(75, 213, 255);  color: rgb(0, 255, 76);}
+    .selected { background-color: rgb(121, 151, 76); }
+    #main{
+        padding: 30px;
+        width: 900px;
+        margin: 0px auto;
+        border: 1px solid black;
+        background-color: white;
+    }
+    #row {
+        display: flex;
+        padding: 10px;
+    }
+    #d1, #d2, #d3{
+        width: 33%;
+        border: 1px solid rgb(170, 170, 170);
+        text-align: center;   
+    }
+    #kepek { display: flex;  }
+    #cica { width: 40%; }
+    img { width: 100%; display: block; margin: 0px auto;}
+
+    #ham { display: none; }
+    #menu { display: inline-block; }
+
+    @media (max-width: 1200px){
+        #main { width: 90%; }
+    }
+
+    @media (max-width: 900px){
+        #row { display: block; }
+        #main { width: 90%; }
+        header #ham { display: inline-block; }
+        header #menu { display: none; }
+        header #menu.show { display: block; position: absolute;}
+        header #menu.show a { display: block; background-color: rgb(28, 34, 92);}
+        #d1, #d2, #d3 { width: 100%; }
+    }
+
+
+</style>
+<body>
+
+    <header>
+        <a href="#" id="ham" onclick="menu()">&#9776;</a>
+        <div id="menu" class="" >
+            <a href="#" class="selected">Kezdőlap</a>
+            <a href="#">Rólunk</a>
+            <a href="#">Infók</a>
+            <a href="#nevjegy">e</a>
+        </div>
+    </header>
+
+    <div id="main">
+        <div id="row">
+            <div id="d1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci doloremque quam tempore quasi harum iure omnis ullam, excepturi est sequi deserunt maiores, ratione iste fugit amet, nemo minus rem odio.</div>
+            <div id="d2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. At consectetur nemo iusto accusamus rem non? Vel maxime deleniti alias excepturi earum sint, enim omnis amet quae autem eaque modi id.</div>
+            <div id="d3">Lorem ipsum dolor sit amet consectetur adipisicing elit. At quod vitae obcaecati et, iusto veritatis deleniti ullam deserunt natus. Ipsum dicta aspernatur culpa enim autem magni esse deleniti earum ipsam!</div>
+        </div>
+        <img id="cica" src="cica.jpg" alt="">
+        <div id="row">
+            <div><img src="kutyu.jpg" alt=""></div>
+            <div><img src="kutyu.jpg" alt=""></div>
+            <div><img src="kutyu.jpg" alt=""></div>
+        </div>
+        <div id="row">
+            <div><img src="kutyu.jpg" alt=""></div>
+            <div><img src="kutyu.jpg" alt=""></div>
+            <div><img src="kutyu.jpg" alt=""></div>
+        </div>
+        <div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit odio quas veniam. Quos eveniet odit nobis harum ex at tempore, qui dolorem facilis recusandae, consequatur quisquam, earum expedita in quis?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit odio quas veniam. Quos eveniet odit nobis harum ex at tempore, qui dolorem facilis recusandae, consequatur quisquam, earum expedita in quis?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit odio quas veniam. Quos eveniet odit nobis harum ex at tempore, qui dolorem facilis recusandae, consequatur quisquam, earum expedita in quis?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit odio quas veniam. Quos eveniet odit nobis harum ex at tempore, qui dolorem facilis recusandae, consequatur quisquam, earum expedita in quis?</p>
+        </div>
+        <a name="nevjegy"></a>
+        <div>
+            Készítette: 12/A
+        </div>
+    </div>
+    
+    
+</body>
+</html>
+
+
+<script>
+
+    function menu(){
+        let m = document.getElementById("menu");
+        if(m.className == "") m.className = "show";
+        else m.className = "";
+    }
+
+</script>
